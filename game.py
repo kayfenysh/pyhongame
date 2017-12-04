@@ -26,7 +26,7 @@ while answer == "Y":
 	while True:
 		letter = input("Введите букву: ")
 		
-		if len(letter) == 1 and letter.isalpha() and letter not in used_letter:
+		if len(letter) == 1 and letter.isalpha() and letter not in used_letter and 1040 <= ord(letter) <= 1104:
 			used_letter.append(letter)
 			if letter in hidden_words:
 				for pos, _letter in enumerate(hidden_words):
