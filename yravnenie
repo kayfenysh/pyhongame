@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script>
+    var a = 2;
+    var b = -1;
+    var c = 4;
+    alert("Дана формула Y=A*X^2+B*X+C. Где A=" + a + " B=" + b + " C=" + c);
+    var x = prompt("Введите значение X");
+    x = parseInt(x);
+    var e = Math.pow(x, 2);
+    var y = (a * e + b * x + c);
+    alert("При X=" + x + " формула Y=" + a + "*X^2+(" + b + ")*X+" + c + " равна " + y);
+</script>
