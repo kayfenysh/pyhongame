@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script>
+    var again = "y";
+    while (again == "y" || again == "Y") {
+        var counter = 0;
+        var answer = parseInt(Math.random() * 100);
+        while (true) {
+            var user_answer = prompt("Введите число. Для выхода введите q");
+            if (user_answer == "q") {
+                alert("До встречи")
+                break;
+            }
+            user_answer = parseInt(user_answer);
+            if (user_answer < answer) {
+                alert("Ответ слишком маленький")
+                counter++;
+            } else if (user_answer > answer) {
+                alert("Ответ слишком большой")
+                counter++;
+            } else if (user_answer == answer) {
+                if (counter < 2) {
+                    var popytka = "попытка"
+                } else if (counter < 5) {
+                    var popytka = "попытки"
+                } else {
+                    var popytka = "попыток"
+                }
+                alert("Поздравляем! Вы угадали. Вам потребовалось " + counter + " " + popytka);
+                var again = prompt("Хотите сыграть заново (Y/Q)?")
+                if (again != "y" || again != "Y") {
+                    break;
+                }
+             } else {
+                alert("Необходимо ввести только цифры.");
+             }
+        }
+    }
+</script>
